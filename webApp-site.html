@@ -2,22 +2,31 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Movies</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
     <style>
         * {
             margin: 0;
         }
-        body{
+
+        body {
             background-color: rgb(241, 241, 241);
         }
+
+        /*Top Header Styles*/
         header {
             background-color: tomato;
             padding: 20px;
             display: flex;
-            justify-content: space-between;
+            justify-content: space-evenly;
+        }
+
+        /*Top Menu Links Styles*/
+        nav {
+            display: flex;
+            align-items: center;
         }
 
         a {
@@ -36,20 +45,32 @@
         .top-nav-right-menu-links {
             color: white;
             font-size: larger;
-            margin-right: 20px;
+            margin: 20px;
+        }
+        .top-nav-right-menu-links:hover{
+            color: black;
+            transition: color 0.5s ease;
         }
 
         .top-header-main-logo {
             color: aliceblue;
         }
 
+        /*Banner Image Styles*/
         .banner-img {
             width: 100%;
         }
 
+        /*Main Text Styles*/
         .first-dsc {
             margin: 25px 0 0 0;
             text-align: center;
+        }
+
+        /*FA Icons Styles*/
+        .mIcons {
+            margin: 40px 0;
+            color: rgb(214, 104, 0);
         }
 
         .info-sections {
@@ -59,18 +80,45 @@
             width: 300px;
         }
 
-        .mIcons {
-            margin: 40px 0;
-            color: rgb(214, 104, 0);
+        /*Top-Searchbar Styles*/
+        .search-box {
+            width: 200px;
+            padding: 10px;
+            border: 2px solid #00028d;
+            border-radius: 25px;
+            outline: none;
+            transition: width 0.3s ease;
+        }
+
+        .search-box:focus,
+        .search-box:hover {
+            width: 300px;
+        }
+        #footer{
+            text-align: center;
+        }
+        #footer p{
+            margin: 5px;
+        }
+        #footer .footer-social-links{
+            margin-top: 20px;
+        }
+        #footer .footer-social-links a{
+            text-decoration: none;
+            padding: 5px;
+            margin-bottom: 5px;
         }
     </style>
 </head>
-<body>
 
+<body>
     <header>
         <a class="top-header-main-logo" href="#">
             <h2>WebApp</h2>
         </a>
+        <div class="search-container">
+            <input type="text" class="search-box" placeholder="Arama yapın..." />
+        </div>
         <nav>
             <ul>
                 <li><a class="top-nav-right-menu-links" href="#">Home</a></li>
@@ -79,30 +127,57 @@
             </ul>
         </nav>
     </header>
-    <img src="https://placehold.co/600x400" class="banner-img" alt="">
+    <img src="https://placehold.co/600x400" class="banner-img" alt="" />
     <main>
         <section class="first-dsc">
-            <h2>Welcome to our website</h2><br>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque, odit?</p>
+            <h2>Welcome to our website</h2>
+            <br />
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque, odit?
+            </p>
         </section>
-        <span style="display: flex; justify-content: center;">
+        <span style="display: flex; justify-content: center">
             <section class="info-sections">
                 <i class="fa-solid fa-right-from-bracket fa-2xl mIcons"></i>
-                <h3>Register</h3><br>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, nihil.</p>
+                <h3>Register</h3>
+                <br />
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi,
+                    nihil.
+                </p>
             </section>
             <section class="info-sections">
                 <i class="fa-brands fa-buffer fa-2xl mIcons"></i>
-                <h3>XxxX</h3><br>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, nihil.</p>
+                <h3>XxxX</h3>
+                <br />
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi,
+                    nihil.
+                </p>
             </section>
             <section class="info-sections">
                 <i class="fa-regular fa-face-smile fa-2xl mIcons"></i>
-                <h3>XxxX</h3><br>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, nihil.</p>
+                <h3>XxxX</h3>
+                <br />
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi,
+                    nihil.
+                </p>
             </section>
         </span>
     </main>
-
+    <hr>
+    <footer>
+        <div id="footer">
+        <p>2022 WebApp. All rights reserved.</p>
+        <div class="footer-social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+    </footer>
 </body>
+
 </html>
